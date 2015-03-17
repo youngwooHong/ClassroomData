@@ -1,0 +1,10 @@
+2015-03-17 17:36:51 DEBUG ClassroomController:24 - Initialized
+2015-03-17 17:41:25 DEBUG ClassroomController:24 - Initialized At Controller
+2015-03-17 17:41:27 DEBUG StudentModel:69 - Setting Student Data Complete
+2015-03-17 17:41:28 DEBUG StudentModel:69 - Setting Student Data Complete
+2015-03-17 17:41:29 DEBUG StudentModel:69 - Setting Student Data Complete
+2015-03-17 17:41:30 DEBUG StudentModel:69 - Setting Student Data Complete
+2015-03-17 17:41:30 DEBUG StudentModel:69 - Setting Student Data Complete
+2015-03-17 18:16:03 DEBUG StudentView:42 - View Created
+2015-03-17 18:16:03 DEBUG ClassroomController:24 - Initialized At Controller
+2015-03-17 18:16:05 DEBUG StudentModel:68 - Setting Student Data Complete
