@@ -1,14 +1,14 @@
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.util.Properties;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 public class StudentModel {
 	
 	private StudentData studentData [];
 	private String classroomLocation;
 	private Properties prop;
-	private Logger log;
+	//private Logger log;
 	
 	public StudentModel(){
 		prop = new Properties();
@@ -19,8 +19,9 @@ public class StudentModel {
 		try{
 			classroomLocation = location;
 			prop = new Properties();
-			prop.load(new FileInputStream("./data/classroomData.properties"));
-			log = Logger.getLogger(StudentModel.class);
+			// Set the prop file here
+			prop.load(new FileInputStream("src/classroomData.properties"));
+			//log = Logger.getLogger(StudentModel.class);
 		}
 		
 		catch(IOException ex){
@@ -65,13 +66,13 @@ public class StudentModel {
 				holder = new int[4];
 			}
 			
-			log.debug("Setting Student Data Complete");
+			//log.debug("Setting Student Data Complete");
 		}
 		
 		catch(Exception ex){
 			System.out.println(ex);
-			log.debug("Exception at StudentModel");
-			log.debug(ex);
+			//log.debug("Exception at StudentModel");
+			//log.debug(ex);
 		}
 		
 	}

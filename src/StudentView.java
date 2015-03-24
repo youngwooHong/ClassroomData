@@ -1,6 +1,6 @@
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import javax.swing.*;
 
 public class StudentView extends JFrame {
@@ -11,7 +11,7 @@ public class StudentView extends JFrame {
 	private JScrollPane selectionFieldScrollPannel;
 	private JPanel selectionPanel;
 	private JPanel mainPanel;
-	Logger log;
+	//Logger log;
 	
 	public StudentView(){
 		
@@ -38,8 +38,8 @@ public class StudentView extends JFrame {
 		this.selectionPanel.add(this.retriveData);
 		//Data Panel
 		
-		this.log = Logger.getLogger(StudentView.class);
-		log.debug("View Created");
+		//this.log = Logger.getLogger(StudentView.class);
+		//log.debug("View Created");
 		
 		mainPanel.add(selectionPanel);
 		mainPanel.add(selectionFieldScrollPannel);

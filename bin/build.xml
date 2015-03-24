@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project basedir="." default="Classroom Data">
+	
+	<property name="base.dir" location="."/>
+	<property name="parent.dir" location=".." />
+	
+	<target name="Classroom Data">
+		
+		<echo>${base.dir}</echo>
+		<echo>${parent.dir}</echo>
+		
+		<antcall target="Compile"/>
+	</target>
+	
+	<target name="Compile">
+		
+		<!--Make the data folder -->
+		<mkdir dir="src"></mkdir>
+		<copy file="classroomData.properties" todir="src"></copy>
+		
+		<!--Compile everything and make a jar -->
+		<javac srcdir="." includeantruntime="false"></javac>
+		<jar destfile="./MVCClassroom.jar" includes="src,*.class" basedir=".">
+			<manifest>
+				<attribute name="Main-Class" value="MVCClassroom"/>
+			</manifest>
+		</jar>
+		
+		<!--Remove all the classes -->
+		<delete>
+			<fileset dir="." includes="*.class"></fileset>
+		</delete>
+		
+	</target>
+	
+	
+</project>
