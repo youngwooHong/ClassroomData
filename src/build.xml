@@ -16,10 +16,21 @@
 		
 		<!--Make the data folder -->
 		<mkdir dir="src"></mkdir>
+		<mkdir dir="lib"></mkdir>
 		<copy file="classroomData.properties" todir="src"></copy>
 		
+		
+		<path id="some.classpath">
+		    <fileset dir="lib">
+		        <include name="*.jar"/>
+		    </fileset>
+		    <pathelement location="log4j-1.2.17.jar"/>
+		</path>
+		
 		<!--Compile everything and make a jar -->
-		<javac srcdir="." includeantruntime="false"></javac>
+		<javac srcdir="." includeantruntime="false">
+			<classpath refid="some.classpath"/>
+		</javac>
 		<jar destfile="./MVCClassroom.jar" includes="src,*.class" basedir=".">
 			<manifest>
 				<attribute name="Main-Class" value="MVCClassroom"/>
